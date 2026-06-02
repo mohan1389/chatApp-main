@@ -112,8 +112,12 @@ const originURL = (process.env.FRONTEND_URL || "http://localhost:5173").replace(
 // console.log("Frontend URL:", originURL);
 
 app.use(cors({
-    origin: originURL,
-    credentials: true
+  origin: [
+    "http://localhost:5173",
+    "https://delicate-eclair-98cb27.netlify.app",
+    "https://chatapp-main.netlify.app"
+  ],
+  credentials: true
 }));
 app.use(cookieParser());
 app.use('/api/v1/user', authRouter);
