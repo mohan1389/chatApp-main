@@ -141,7 +141,8 @@ export const AuthContext = createContext<any>('');
 function AuthContextProvider({children}: {children: React.ReactNode}) {
     // const backEndURL = import.meta.env.VITE_BACKEND_URL;
     // const backEndURL = "http://localhost:5000";
-    const backEndURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+    // const backEndURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+    const backEndURL = import.meta.env.VITE_BACKEND_URL;
     console.log("BACKEND URL =", backEndURL);
     const [signedIn, setIsSignedIn] = useState<boolean>(false);
     const [userInfo, setUserInfo] = useState<any>();
