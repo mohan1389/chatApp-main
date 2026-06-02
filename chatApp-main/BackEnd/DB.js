@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const dbUrl = process.env.connectionString;
 
-console.log("DATABASE URL:", dbUrl);
+//console.log("DATABASE URL:", dbUrl);
 
 const pgClient = new Client({
     connectionString: dbUrl,
