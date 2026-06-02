@@ -18,9 +18,13 @@ const { checkUser } = require('./middleware/auth.middleware.js');
 const app = express();
 app.use(express.json());
 
-const originURL = process.env.FRONTEND_URL;
-console.log("Frontend URL:", originURL);
+const originURL = process.env.FRONTEND_URL || "http://localhost:5173";
 
+ // Console log remove kar do ya comment out kar do
+// console.log("Frontend URL:", originURL);
+
+// const originURL = process.env.FRONTEND_URL;
+// console.log("Frontend URL:", originURL);
 app.use(cors({
     origin: originURL,
     credentials: true
